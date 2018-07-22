@@ -1,20 +1,17 @@
 package routers
 
 import (
-	"sso_admin/controllers"
+	"sso_admin/controllers/sitecontrollers"
+	"sso_admin/controllers/usercontrollers"
 
 	"github.com/astaxie/beego"
 )
 
 func init() {
-	beego.Router("/", &controllers.MainController{})
+	//beego.Router("/", &sitecontrollers.SiteController{}, "get:Index")
 
-	ns := beego.NewNamespace("/v1",
-		beego.NSRouter("/t", &controllers.MainController{}),
-		beego.NSNamespace("/test",
-			beego.NSRouter("/test", &controllers.MainController{}),
-		),
-	)
+	beego.Router("/site/list", &sitecontrollers.SiteController{}, "get:Index")
+	beego.Router("/site/test", &sitecontrollers.SiteController{}, "get:Test")
 
-	beego.AddNamespace(ns)
+	beego.NSRouter("/user/list", &usercontrollers.UserController{}, "get:List")
 }

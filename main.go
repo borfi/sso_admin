@@ -9,19 +9,18 @@ import (
 )
 
 func main() {
-	//beego.Info(beego.BConfig.AppName, "1.0")
-
 	var filterDeal = func(ctx *beegoCtx.Context) {
-		loginDeal(ctx)
-		authDeal(ctx)
+		loginCheck(ctx)
+		authCheck(ctx)
 	}
 	beego.InsertFilter("/*", beego.BeforeExec, filterDeal)
 
 	beego.Run()
 }
 
-//判断是否已经登陆
-func loginDeal(ctx *beegoCtx.Context) {
+//登陆检查
+func loginCheck(ctx *beegoCtx.Context) {
+	return
 	url := ctx.Input.URL()
 	isAjax := ctx.Input.IsAjax()
 	account, ok := ctx.Input.Session("account").(string)
@@ -46,8 +45,9 @@ func loginDeal(ctx *beegoCtx.Context) {
 	}
 }
 
-//判断是否有权限
-func authDeal(ctx *beegoCtx.Context) {
+//权限检查
+func authCheck(ctx *beegoCtx.Context) {
+	return
 	url := ctx.Input.URL()
 	isAjax := ctx.Input.IsAjax()
 	data := map[string]interface{}{"succ": 0, "msg": "报歉，您没有此操作权限！"}
