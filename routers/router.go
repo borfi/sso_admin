@@ -13,5 +13,5 @@ func init() {
 	beego.Router("/site/list", &sitecontrollers.SiteController{}, "get:Index")
 	beego.Router("/site/test", &sitecontrollers.SiteController{}, "get:Test")
 
-	beego.NSRouter("/user/list", &usercontrollers.UserController{}, "get:List")
+	beego.Router("/user/list", &usercontrollers.UserController{}, "get:List")
 }
