@@ -8,7 +8,7 @@ import (
 )
 
 func init() {
-	//beego.Router("/", &sitecontrollers.SiteController{}, "get:Index")
+	beego.Router("/", &sitecontrollers.SiteController{}, "get:Index")
 
 	beego.Router("/site/list", &sitecontrollers.SiteController{}, "get:Index")
 	beego.Router("/site/test", &sitecontrollers.SiteController{}, "get:Test")
