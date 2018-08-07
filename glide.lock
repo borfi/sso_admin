@@ -1,5 +1,5 @@
-hash: 4be79c89250f3a88985382bac943feef955b70338eef27cba163328f5fba2c99
-updated: 2018-08-02T20:54:08.028166+08:00
+hash: ac245072ab26a1988fbadb24171f260c2673ab5e61287aebcd5947edff76cf12
+updated: 2018-08-07T15:02:18.936614+08:00
 imports:
 - name: github.com/astaxie/beego
   version: 053a075344c118a5cc41981b29ef612bb53d20ca
@@ -17,7 +17,7 @@ imports:
   subpackages:
   - redis
 - name: github.com/go-sql-driver/mysql
-  version: 749ddf1598b47e3cd909414bda735fe790ef3d30
+  version: 99ff426eb706cffe92ff3d058e168b278cabf7c7
 - name: github.com/pquerna/ffjson
   version: af8b230fcd2007c7095168ca8ab94c68b60840c6
   subpackages:
@@ -25,7 +25,7 @@ imports:
 - name: github.com/shopspring/decimal
   version: cd690d0c9e2447b1ef2a129a6b7b49077da89b8e
 - name: golang.org/x/crypto
-  version: c126467f60eb25f8f27e5a981f32a87e3965053f
+  version: 80fca2ff14a3fb7db622c9a5462f8ce9ea026cba
   subpackages:
   - acme
   - acme/autocert
@@ -39,7 +39,7 @@ testImports:
 - name: github.com/jtolds/gls
   version: 77f18212c9c7edc9bd6a33d383a7b545ce62f064
 - name: github.com/smartystreets/assertions
-  version: e900ae048470ba3ce0440bc5ba1baf2bd87a9a1d
+  version: 886ec427f6b97ea7c207ab54f4045050647c2820
   subpackages:
   - internal/go-render/render
   - internal/oglematchers
